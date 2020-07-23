@@ -66,7 +66,7 @@ bool sudokuSolver(int board[][9]){
     if(!findEmptyLocation(board,row,col)){
         return true;
     }
-    for(int i=1; i<9; i++){
+    for(int i=1; i<=9; i++){
         if(isSafe(board,row,col,i)){
             board[row][col]=i;
             if(sudokuSolver(board)){
